@@ -53,7 +53,9 @@ class _CounterScreenState extends State<CounterScreen> {
             icon: Icons.remove,
             onPressed: () {
               setState(() {
-                clickCounter--;
+                if (clickCounter > 0) {
+                  clickCounter--;
+                }
               });
             },
           ),
